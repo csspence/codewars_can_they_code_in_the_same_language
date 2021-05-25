@@ -20,6 +20,15 @@ The strings representing a given language will always be formatted in the same w
 The input array will always be valid and formatted as in the example above.
 */
 
-function isSameLanguage(list) {
-  // thank you for checking out the Coding Meetup kata :)
+const isSameLanguage = (list) => {
+  let language;
+  for(let i = 0; i < list.length; i++) {
+    if(i === 0) {
+      language = list[i].language;
+    } else if(language !== list[i].language) {
+      return false;
+    }
+  }
+
+  return true;
 }
